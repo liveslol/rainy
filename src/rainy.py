@@ -1,22 +1,33 @@
+#!/usr/bin/env python
+
+# Config
+
+###########################################################################################################################
+api_key = "" # Create an account on OpenWeather (it's free) and get your API token there. #
+city = "" # Your city                                                                                                 #
+units = "metric" # you can choose metric or imperial                                                                      #
+timeplus = "0" # Timezone used by default is UTC/GMT so you can define how many hours should be added to the time         #
+timeminus = "0" # Timezone used by default is UTC/GMT so you can define how many hours should be subtracted from the time #
+###########################################################################################################################
+
+
+
 import requests
-import config
 import datetime
 import sys
 
-city = config.city
-units = config.units
-api_key = config.api_key
-timeplus = int(config.timeplus)
-timeminus = int(config.timeminus)
+timeplus = int(timeplus)
+timeminus = int(timeminus)
 
-if config.units == "metric":
+if units == "metric":
     windspeedunits = "m/s"
-elif config.units == "imperial":
+elif units == "imperial":
     windspeedunits = "mph"
 else:
     windspeedunits = "m/s"
 
 weather_data = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&units={units}&APPID={api_key}")
+
 if weather_data.json() ['cod'] == 200:
     pass
 elif weather_data.json() ['cod'] == '404':
