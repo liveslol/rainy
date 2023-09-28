@@ -19,7 +19,8 @@ To install rainy, clone or download the repo, ```cd``` into it and just run ```m
 * Then edit ```/usr/local/bin/rainy``` and set the API key, city and timezone in the config section.
 
 ## Usage
-If you set it up correctly, you can just go to your terminal and type ```rainy```
+When set up correctly, you can just go to your terminal and type ```rainy```
+If you like this tool, please consider starring as it helps the growth <3
 
 ### Thanks
 * [wego](https://github.com/schachmat/wego) for providing ASCII weather icons
