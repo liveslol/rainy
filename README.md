@@ -20,6 +20,7 @@ To install rainy, clone or download the repo, ```cd``` into it and just run ```m
 
 ## Usage
 When set up correctly, you can just go to your terminal and type ```rainy```
+
 If you like this tool, please consider starring as it helps the growth <3
 
 ### Thanks
