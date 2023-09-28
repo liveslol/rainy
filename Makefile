@@ -1,4 +1,3 @@
-# Define installation paths
 PREFIX ?= /usr/local
 BINDIR = $(PREFIX)/bin
 
