@@ -8,7 +8,7 @@ What's the weather? Aesthetic and minimalistic weather fetching tool.
 * ```requests```
 * ```make```
 
-You can install both from your distros repositories (usually they're named ```python```, ```python-requests``` and ```make```)
+You can install all of them from your distros repositories (usually they're named ```python```, ```python-requests``` and ```make```)
 
 ## Installation & Configuration
 To install rainy, clone or download the repo, ```cd``` into it and just run ```make install``` (you can run ```make uninstall``` to uninstall it)
