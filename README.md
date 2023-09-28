@@ -15,9 +15,8 @@ To install rainy, clone or download the repo, ```cd``` into it and just run ```m
 
 **Before usage, you need to configure it**
 
-First create an [OpenWeatherMap](https://home.openweathermap.org/users/sign_up) account, go to [API keys](https://home.openweathermap.org/api_keys) and get your key.
-
-Then edit ```/usr/local/bin/rainy``` and set the API key in the config section.
+* First create an [OpenWeatherMap](https://home.openweathermap.org/users/sign_up) account, go to [API keys](https://home.openweathermap.org/api_keys) and get your key.
+* Then edit ```/usr/local/bin/rainy``` and set the API key in the config section.
 In the config section, also update your city and the timezone (you can add or subtract hours)
 
 ## Usage
