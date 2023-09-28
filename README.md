@@ -1,2 +1,2 @@
 # rainy
-What is the weather? Aesthetic, minimalistic and customizable weather fetching tool.
+What's the weather? Aesthetic and minimalistic weather fetching tool.
