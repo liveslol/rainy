@@ -1,5 +1,6 @@
 # rainy
 What's the weather? Aesthetic and minimalistic weather fetching tool.
+
 <img src="assets/preview.png">
 
 ## Dependencies
