@@ -14,7 +14,9 @@ You can install both from your distros repositories (usually they're named ```py
 To install rainy, clone or download the repo, ```cd``` into it and just run ```make install``` (you can run ```make uninstall``` to uninstall it)
 
 **Before usage, you need to configure it**
+
 First create an [OpenWeatherMap](https://home.openweathermap.org/users/sign_up) account, go to [API keys](https://home.openweathermap.org/api_keys) and get your key.
+
 Then edit ```/usr/local/bin/rainy``` and set the API key in the config section.
 In the config section, also update your city and the timezone (you can add or subtract hours)
 
