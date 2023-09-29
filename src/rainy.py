@@ -5,10 +5,10 @@
 ###########################################################################################################################
 
 api_key = "changeme" # Create an account on OpenWeather (it's free) and get your API token there
-city = "changeme" # Your city                                                                                                 
-units = "metric" # you can choose metric or imperial                                                                      
-timeplus = "0" # Timezone used by default is UTC/GMT so you can define how many hours should be added to the time         
-timeminus = "0" # Timezone used by default is UTC/GMT so you can define how many hours should be subtracted from the time 
+city = "changeme" # Your city
+units = "metric" # you can choose metric or imperial (anything else is kelvin)
+timeplus = "0" # Timezone used by default is UTC/GMT so you can define how many hours should be added to the time
+timeminus = "0" # Timezone used by default is UTC/GMT so you can define how many hours should be subtracted from the time
 
 ###########################################################################################################################
 
@@ -57,51 +57,53 @@ weather = weather_data.json()['weather'][0]['main']
 temp = str(round(weather_data.json()['main']['temp'])) + '°'
 
 if units == "metric":
-    temp += " C"
+    temp += "C"
+elif units == "imperial":
+    temp += "F"
 else:
-    temp += " F"
+    temp += "K"
 
-wind_speed = str(round(weather_data.json()['wind']['speed']))
+wind_speed = str(round(weather_data.json()['wind']['speed'])) + " " + windspeedunits
 
 if weather == "Clear":
     print("     \   /     " + "Weather: clear", 
           "      .-.      " + "Temperature: " + temp, 
-          "   ‒ (   ) ‒   " + "Wind speed: " + wind_speed + " " + windspeedunits,
+          "   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
           "      `-᾿      " + "Sunrise: " + sunrisestring, 
           "     /   \     " + "Sunset: " + sunsetstring, 
           "               ", sep = '\n')
 elif weather == "Clouds":
     print("                 " + "Weather: cloudy", 
           "       .--.      " + "Temprature: " + temp, 
-          "    .-(    ).    " + "Wind speed: " + wind_speed + " " + windspeedunits, 
+          "    .-(    ).    " + "Wind speed: " + wind_speed, 
           "   (___.__)__)   " + "Sunrise: " + sunrisestring,
           "                 " + "Sunset: " + sunsetstring,
           "                 ", sep = '\n')
 elif weather == "Rain":
     print("                 " + "Weather: rainy", 
           "       .--.      " + "Temprature: " + temp, 
-          "    .-(    ).    " + "Wind speed: " + wind_speed + " " + windspeedunits, 
+          "    .-(    ).    " + "Wind speed: " + wind_speed, 
           "   (___.__)__)   " + "Sunrise: " + sunrisestring,
           "    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunset: " + sunsetstring,
           "                 ", sep = '\n')
 elif weather == "Snow":
     print("                 " + "Weather: snowy", 
           "       .--.      " + "Temprature: " + temp, 
-          "    .-(    ).    " + "Wind speed: " + wind_speed + " " + windspeedunits, 
+          "    .-(    ).    " + "Wind speed: " + wind_speed, 
           "   (___.__)__)   " + "Sunrise: " + sunrisestring,
           "    * * * * *    " + "Sunset: " + sunsetstring,
           "                 ", sep = '\n')
 elif weather == "Thunderstorm":
     print("       .--.      " + "Weather: stormy", 
           "    .-(    ).    " + "Temprature: " + temp, 
-          "   (___.__)__)   " + "Wind speed: " + wind_speed + " " + windspeedunits, 
+          "   (___.__)__)   " + "Wind speed: " + wind_speed, 
           "        /_       " + "Sunrise: " + sunrisestring,
           "         /       " + "Sunset: " + sunsetstring,
           "                 ", sep = '\n')
 else:
     print("                 " + "Weather: " + weather, 
           "       .--.      " + "Temprature: " + temp, 
-          "    .-(    ).    " + "Wind speed: " + wind_speed + " " + windspeedunits, 
+          "    .-(    ).    " + "Wind speed: " + wind_speed, 
           "   (___.__)__)   " + "Sunrise: " + sunrisestring,
           "                 " + "Sunset: " + sunsetstring,
           "                 ", sep = '\n')
