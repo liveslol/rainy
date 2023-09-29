@@ -21,7 +21,12 @@ To install rainy, clone or download the repo, ```cd``` into it and just run ```m
 ## Usage
 When set up correctly, you can just go to your terminal and type ```rainy```
 
+What if there's an update? I'm probably gonna be working on this thing more so you can just update your local git clone and sudo make again.
+
 If you like this tool, please consider starring as it helps the growth <3
+
+### PS
+If you like this tool so much that you would want to work on it, you can just create a PR or for long term you can message me and become a team working on this <<
 
 ### Thanks
 * [wego](https://github.com/schachmat/wego) for providing ASCII weather icons
