@@ -21,7 +21,7 @@ To install rainy, clone or download the repo, ```cd``` into it and just run ```m
 ## Usage
 When set up correctly, you can just go to your terminal and type ```rainy```
 
-What if there's an update? I'm probably gonna be working on this thing more so you can just update your local git clone and sudo make again.
+What if there's an update? You can just update your local git clone and sudo make again (you can also edit the config of the git clone you you don't have to set it every time you sudo make)
 
 If you like this tool, please consider starring as it helps the growth <3
 
