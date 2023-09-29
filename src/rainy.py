@@ -54,7 +54,12 @@ sunsetstring = adjusted_sunset.strftime("%H:%M:%S")
 
 weather = weather_data.json()['weather'][0]['main']
 
-temp = str(round(weather_data.json()['main']['temp']))
+temp = str(round(weather_data.json()['main']['temp'])) + '°'
+
+if units == "metric":
+    temp += " C"
+else:
+    temp += " F"
 
 wind_speed = str(round(weather_data.json()['wind']['speed']))
 
