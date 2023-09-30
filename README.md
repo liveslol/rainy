@@ -23,5 +23,8 @@ When set up correctly, you can just go to your terminal and type ```rainy```
 
 If you like this tool, please consider starring as it helps the growth <3
 
+## PS
+This project seems pretty exciting, with plenty of room to grow. I've been on the lookout for a long-term project, and if anyone's interested in working on this with me, just message me (I'm not sure I'd be working on this alone that much) <<
+
 ### Thanks
 * [wego](https://github.com/schachmat/wego) for providing ASCII weather icons
