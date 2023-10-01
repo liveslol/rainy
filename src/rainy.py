@@ -9,6 +9,7 @@ city = "changeme"  # Your city
 units = "metric"  # you can choose metric or imperial (anything else is kelvin)
 timeplus = "0"  # Timezone used by default is UTC/GMT so you can define how many hours should be added to the time
 timeminus = "0"  # Timezone used by default is UTC/GMT so you can define how many hours should be subtracted from the time
+showcityname = "no" # Show the city name in information, yes or no
 
 ###########################################################################################################################
 
@@ -75,7 +76,7 @@ else:
 
 wind_speed = str(round(weather_data.json()["wind"]["speed"])) + " " + windspeedunits
 
-if weather == "Clear":
+if weather == "Clear" and showcityname == "yes":
     print(
         "               " + "City: " + city,
         "     \   /     " + "Weather: clear",
@@ -86,7 +87,7 @@ if weather == "Clear":
         "               ",
         sep="\n",
     )
-elif weather == "Clouds":
+elif weather == "Clouds" and showcityname == "yes":
     print(
         "                 " + "City: " + city,
         "       .--.      " + "Weather: cloudy",
@@ -97,7 +98,7 @@ elif weather == "Clouds":
         "                 ",
         sep="\n",
     )
-elif weather == "Rain":
+elif weather == "Rain" and showcityname == "yes":
     print(
         "                 " + "City: " + city,
         "       .--.      " + "Weather: rainy",
@@ -108,7 +109,7 @@ elif weather == "Rain":
         "                 ",
         sep="\n",
     )
-elif weather == "Snow":
+elif weather == "Snow" and showcityname == "yes":
     print(
         "                 " + "City: " + city,
         "       .--.      " + "Weather: snowy",
@@ -119,7 +120,7 @@ elif weather == "Snow":
         "                 ",
         sep="\n",
     )
-elif weather == "Thunderstorm":
+elif weather == "Thunderstorm" and showcityname == "yes":
     print(
         "                 " + "City: " + city,
         "       .--.      " + "Weather: stormy",
@@ -130,7 +131,7 @@ elif weather == "Thunderstorm":
         "                 ",
         sep="\n",
     )
-else:
+elif showcityname == "yes":
     print(
         "                 " + "City: " + city,
         "       .--.      " + "Weather: " + weather,
@@ -141,3 +142,45 @@ else:
         "                 ",
         sep="\n",
     )
+elif weather == "Clear":
+    print("     \   /     " + "Weather: clear", 
+          "      .-.      " + "Temperature: " + temp, 
+          "   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
+          "      `-᾿      " + "Sunrise: " + sunrisestring, 
+          "     /   \     " + "Sunset: " + sunsetstring, 
+          "               ", sep = '\n')
+elif weather == "Clouds":
+    print("                 " + "Weather: cloudy", 
+          "       .--.      " + "Temprature: " + temp, 
+          "    .-(    ).    " + "Wind speed: " + wind_speed, 
+          "   (___.__)__)   " + "Sunrise: " + sunrisestring,
+          "                 " + "Sunset: " + sunsetstring,
+          "                 ", sep = '\n')
+elif weather == "Rain":
+    print("                 " + "Weather: rainy", 
+          "       .--.      " + "Temprature: " + temp, 
+          "    .-(    ).    " + "Wind speed: " + wind_speed, 
+          "   (___.__)__)   " + "Sunrise: " + sunrisestring,
+          "    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunset: " + sunsetstring,
+          "                 ", sep = '\n')
+elif weather == "Snow":
+    print("                 " + "Weather: snowy", 
+          "       .--.      " + "Temprature: " + temp, 
+          "    .-(    ).    " + "Wind speed: " + wind_speed, 
+          "   (___.__)__)   " + "Sunrise: " + sunrisestring,
+          "    * * * * *    " + "Sunset: " + sunsetstring,
+          "                 ", sep = '\n')
+elif weather == "Thunderstorm":
+    print("       .--.      " + "Weather: stormy", 
+          "    .-(    ).    " + "Temprature: " + temp, 
+          "   (___.__)__)   " + "Wind speed: " + wind_speed, 
+          "        /_       " + "Sunrise: " + sunrisestring,
+          "         /       " + "Sunset: " + sunsetstring,
+          "                 ", sep = '\n')
+else:
+    print("                 " + "Weather: " + weather, 
+          "       .--.      " + "Temprature: " + temp, 
+          "    .-(    ).    " + "Wind speed: " + wind_speed, 
+          "   (___.__)__)   " + "Sunrise: " + sunrisestring,
+          "                 " + "Sunset: " + sunsetstring,
+          "                 ", sep = '\n')
