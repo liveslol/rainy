@@ -26,7 +26,7 @@ What if there's an update? You can just update your local git clone and sudo mak
 If you like this tool, please consider starring as it helps the growth <3
 
 ### PS
-This project seems pretty exciting, with plenty of room to grow. I've been on the lookout for a long-term project, and if anyone's interested in working on this with me, just message me (I'm not sure I'd be working on this alone that much) <<
+This project seems pretty exciting, with plenty of room to grow. I've been on the lookout for a long-term project, and if anyone's interested in working on this with me, just message me (I'm not sure I'd be working on this alone) <<
 
 ### Thanks
 * [wego](https://github.com/schachmat/wego) for providing ASCII weather icons
