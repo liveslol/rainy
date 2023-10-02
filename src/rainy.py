@@ -88,12 +88,12 @@ if weather == "Clear":
         ]
         if showcityname
         else [
-            "               " + "Weather: clear",
-            "     \   /     " + "Temperature: " + temp,
-            "      .-.      " + "Wind speed: " + wind_speed,
-            "   ‒ (   ) ‒   " + "Sunrise: " + sunrisestring,
-            "      `-᾿      " + "Sunset: " + sunsetstring,
-            "     /   \     ",
+            "               ",
+            "     \   /     " + "Weather: clear",
+            "      .-.      " + "Temperature: " + temp,
+            "   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
+            "      `-᾿      " + "Sunrise: " + sunrisestring,
+            "     /   \     " + "Sunset: " + sunsetstring,
             "               ",
         ]
     )
@@ -160,7 +160,7 @@ elif weather == "Snow":
             "                 ",
         ]
     )
-elif weather == "Thunderstorm" and showcityname == "yes":
+elif weather == "Thunderstorm":
     output = (
         [
             "                 " + "City: " + city,
