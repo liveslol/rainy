@@ -9,7 +9,7 @@ city = "changeme"  # Your city
 units = "metric"  # you can choose metric or imperial (anything else is kelvin)
 timeplus = 0  # Timezone used by default is UTC/GMT so you can define how many hours should be added to the time
 timeminus = 0  # Timezone used by default is UTC/GMT so you can define how many hours should be subtracted from the time
-showcityname = True  # Show the city name in information, True or False
+showcityname = False  # Show the city name in information, True or False
 
 ###########################################################################################################################
 
