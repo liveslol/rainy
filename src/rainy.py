@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # Config
 
@@ -10,12 +10,15 @@ units = "metric"  # you can choose metric or imperial (anything else is kelvin)
 timeplus = 0  # Timezone used by default is UTC/GMT so you can define how many hours should be added to the time
 timeminus = 0  # Timezone used by default is UTC/GMT so you can define how many hours should be subtracted from the time
 showcityname = False  # Show the city name in information, True or False
+showdate = True # Shows the date. Unfortunatly only in MM/DD/YY. True or False
 
 ###########################################################################################################################
 
 import requests
 import datetime
 import sys
+
+date = datetime.datetime.now().strftime("%x")
 
 if units == "metric":
     windspeedunits = "m/s"
@@ -84,7 +87,7 @@ if weather == "Clear":
             "   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
             "      `-᾿      " + "Sunrise: " + sunrisestring,
             "     /   \     " + "Sunset: " + sunsetstring,
-            "               ",
+            "               " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
@@ -94,7 +97,7 @@ if weather == "Clear":
             "   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
             "      `-᾿      " + "Sunrise: " + sunrisestring,
             "     /   \     " + "Sunset: " + sunsetstring,
-            "               ",
+            "               " + "Date: " + date  if showdate else "",
         ]
     )
 elif weather == "Clouds":
@@ -106,7 +109,7 @@ elif weather == "Clouds":
             "   (___.__)__)   " + "Wind speed: " + wind_speed,
             "                 " + "Sunrise: " + sunrisestring,
             "                 " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
@@ -115,7 +118,7 @@ elif weather == "Clouds":
             "    .-(    ).    " + "Wind speed: " + wind_speed,
             "   (___.__)__)   " + "Sunrise: " + sunrisestring,
             "                 " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
     )
 elif weather == "Rain":
@@ -127,7 +130,7 @@ elif weather == "Rain":
             "   (___.__)__)   " + "Wind speed: " + wind_speed,
             "    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunrise: " + sunrisestring,
             "                 " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
@@ -136,7 +139,7 @@ elif weather == "Rain":
             "    .-(    ).    " + "Wind speed: " + wind_speed,
             "   (___.__)__)   " + "Sunrise: " + sunrisestring,
             "    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
     )
 elif weather == "Snow":
@@ -148,7 +151,7 @@ elif weather == "Snow":
             "   (___.__)__)   " + "Wind speed: " + wind_speed,
             "    * * * * *    " + "Sunrise: " + sunrisestring,
             "                 " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
@@ -157,7 +160,7 @@ elif weather == "Snow":
             "    .-(    ).    " + "Wind speed: " + wind_speed,
             "   (___.__)__)   " + "Sunrise: " + sunrisestring,
             "    * * * * *    " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
     )
 elif weather == "Thunderstorm":
@@ -169,7 +172,7 @@ elif weather == "Thunderstorm":
             "   (___.__)__)   " + "Wind speed: " + wind_speed,
             "        /_       " + "Sunrise: " + sunrisestring,
             "         /       " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
@@ -178,7 +181,7 @@ elif weather == "Thunderstorm":
             "   (___.__)__)   " + "Wind speed: " + wind_speed,
             "        /_       " + "Sunrise: " + sunrisestring,
             "         /       " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
     )
 else:
@@ -190,7 +193,7 @@ else:
             "   (___.__)__)   " + "Wind speed: " + wind_speed,
             "                 " + "Sunrise: " + sunrisestring,
             "                 " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
@@ -199,7 +202,7 @@ else:
             "    .-(    ).    " + "Wind speed: " + wind_speed,
             "   (___.__)__)   " + "Sunrise: " + sunrisestring,
             "                 " + "Sunset: " + sunsetstring,
-            "                 ",
+            "                 " + "Date: " + date if showdate else "",
         ]
     )
 
