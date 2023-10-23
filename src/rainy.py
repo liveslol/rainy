@@ -10,7 +10,7 @@ units = "metric"  # you can choose metric or imperial (anything else is kelvin)
 timeplus = 0  # Timezone used by default is UTC/GMT so you can define how many hours should be added to the time
 timeminus = 0  # Timezone used by default is UTC/GMT so you can define how many hours should be subtracted from the time
 showcityname = False  # Show the city name in information, True or False
-showdate = True # Shows the date. Unfortunatly only in MM/DD/YY. True or False
+showdate = False # Shows the date. Unfortunatly only in MM/DD/YY. True or False
 
 ###########################################################################################################################
 
