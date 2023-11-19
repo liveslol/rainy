@@ -32,5 +32,3 @@ This project seems pretty exciting, with plenty of room to grow. I've been on th
 ### Thanks
 * [1Codealot](https://github.com/1Codealot) and [Chirikumbrah](https://github.com/Chirikumbrah) for helping out with the code a lot :)
 * [wego](https://github.com/schachmat/wego) for providing ASCII weather icons
-
-
