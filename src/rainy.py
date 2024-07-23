@@ -46,8 +46,9 @@ else:
 sourcesunrise = weather_data.json()["sys"]["sunrise"]
 sourcesunset = weather_data.json()["sys"]["sunset"]
 
-sunrise_datetime = datetime.datetime.utcfromtimestamp(sourcesunrise)
-sunset_datetime = datetime.datetime.utcfromtimestamp(sourcesunset)
+
+sunrise_datetime = datetime.datetime.fromtimestamp(sourcesunrise, tz=datetime.timezone.utc)
+sunset_datetime = datetime.datetime.fromtimestamp(sourcesunset, tz=datetime.timezone.utc)
 
 adjusted_sunrise = (
     sunrise_datetime
@@ -81,128 +82,128 @@ output = []
 if weather == "Clear":
     output = (
         [
-            "               " + "City: " + city,
-            "     \   /     " + "Weather: clear",
-            "      .-.      " + "Temperature: " + temp,
-            "   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
-            "      `-᾿      " + "Sunrise: " + sunrisestring,
-            "     /   \     " + "Sunset: " + sunsetstring,
-            "               " + "Date: " + date  if showdate else "",
+            r"               " + "City: " + city,
+            r"     \   /     " + "Weather: clear",
+            r"      .-.      " + "Temperature: " + temp,
+            r"   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
+            r"      `-᾿      " + "Sunrise: " + sunrisestring,
+            r"     /   \     " + "Sunset: " + sunsetstring,
+            r"               " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
-            "               ",
-            "     \   /     " + "Weather: clear",
-            "      .-.      " + "Temperature: " + temp,
-            "   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
-            "      `-᾿      " + "Sunrise: " + sunrisestring,
-            "     /   \     " + "Sunset: " + sunsetstring,
-            "               " + "Date: " + date  if showdate else "",
+            r"               ",
+            r"     \   /     " + "Weather: clear",
+            r"      .-.      " + "Temperature: " + temp,
+            r"   ‒ (   ) ‒   " + "Wind speed: " + wind_speed,
+            r"      `-᾿      " + "Sunrise: " + sunrisestring,
+            r"     /   \     " + "Sunset: " + sunsetstring,
+            r"               " + "Date: " + date  if showdate else "",
         ]
     )
 elif weather == "Clouds":
     output = (
         [
-            "                 " + "City: " + city,
-            "       .--.      " + "Weather: cloudy",
-            "    .-(    ).    " + "Temprature: " + temp,
-            "   (___.__)__)   " + "Wind speed: " + wind_speed,
-            "                 " + "Sunrise: " + sunrisestring,
-            "                 " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"                 " + "City: " + city,
+            r"       .--.      " + "Weather: cloudy",
+            r"    .-(    ).    " + "Temprature: " + temp,
+            r"   (___.__)__)   " + "Wind speed: " + wind_speed,
+            r"                 " + "Sunrise: " + sunrisestring,
+            r"                 " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
-            "                 " + "Weather: cloudy",
-            "       .--.      " + "Temprature: " + temp,
-            "    .-(    ).    " + "Wind speed: " + wind_speed,
-            "   (___.__)__)   " + "Sunrise: " + sunrisestring,
-            "                 " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"                 " + "Weather: cloudy",
+            r"       .--.      " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Wind speed: " + wind_speed,
+            r"   (___.__)__)   " + "Sunrise: " + sunrisestring,
+            r"                 " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
     )
 elif weather == "Rain":
     output = (
         [
-            "                 " + "City: " + city,
-            "       .--.      " + "Weather: rainy",
-            "    .-(    ).    " + "Temprature: " + temp,
-            "   (___.__)__)   " + "Wind speed: " + wind_speed,
-            "    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunrise: " + sunrisestring,
-            "                 " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"                 " + "City: " + city,
+            r"       .--.      " + "Weather: rainy",
+            r"    .-(    ).    " + "Temprature: " + temp,
+            r"   (___.__)__)   " + "Wind speed: " + wind_speed,
+            r"    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunrise: " + sunrisestring,
+            r"                 " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
-            "                 " + "Weather: rainy",
-            "       .--.      " + "Temprature: " + temp,
-            "    .-(    ).    " + "Wind speed: " + wind_speed,
-            "   (___.__)__)   " + "Sunrise: " + sunrisestring,
-            "    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"                 " + "Weather: rainy",
+            r"       .--.      " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Wind speed: " + wind_speed,
+            r"   (___.__)__)   " + "Sunrise: " + sunrisestring,
+            r"    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
     )
 elif weather == "Snow":
     output = (
         [
-            "                 " + "City: " + city,
-            "       .--.      " + "Weather: snowy",
-            "    .-(    ).    " + "Temprature: " + temp,
-            "   (___.__)__)   " + "Wind speed: " + wind_speed,
-            "    * * * * *    " + "Sunrise: " + sunrisestring,
-            "                 " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"                 " + "City: " + city,
+            r"       .--.      " + "Weather: snowy",
+            r"    .-(    ).    " + "Temprature: " + temp,
+            r"   (___.__)__)   " + "Wind speed: " + wind_speed,
+            r"    * * * * *    " + "Sunrise: " + sunrisestring,
+            r"                 " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
-            "                 " + "Weather: snowy",
-            "       .--.      " + "Temprature: " + temp,
-            "    .-(    ).    " + "Wind speed: " + wind_speed,
-            "   (___.__)__)   " + "Sunrise: " + sunrisestring,
-            "    * * * * *    " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"                 " + "Weather: snowy",
+            r"       .--.      " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Wind speed: " + wind_speed,
+            r"   (___.__)__)   " + "Sunrise: " + sunrisestring,
+            r"    * * * * *    " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
     )
 elif weather == "Thunderstorm":
     output = (
         [
-            "                 " + "City: " + city,
-            "       .--.      " + "Weather: stormy",
-            "    .-(    ).    " + "Temprature: " + temp,
-            "   (___.__)__)   " + "Wind speed: " + wind_speed,
-            "        /_       " + "Sunrise: " + sunrisestring,
-            "         /       " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"                 " + "City: " + city,
+            r"       .--.      " + "Weather: stormy",
+            r"    .-(    ).    " + "Temprature: " + temp,
+            r"   (___.__)__)   " + "Wind speed: " + wind_speed,
+            r"        /_       " + "Sunrise: " + sunrisestring,
+            r"         /       " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
-            "       .--.      " + "Weather: stormy",
-            "    .-(    ).    " + "Temprature: " + temp,
-            "   (___.__)__)   " + "Wind speed: " + wind_speed,
-            "        /_       " + "Sunrise: " + sunrisestring,
-            "         /       " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"       .--.      " + "Weather: stormy",
+            r"    .-(    ).    " + "Temprature: " + temp,
+            r"   (___.__)__)   " + "Wind speed: " + wind_speed,
+            r"        /_       " + "Sunrise: " + sunrisestring,
+            r"         /       " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
     )
 else:
     output = (
         [
-            "                 " + "City: " + city,
-            "       .--.      " + "Weather: " + weather,
-            "    .-(    ).    " + "Temprature: " + temp,
-            "   (___.__)__)   " + "Wind speed: " + wind_speed,
-            "                 " + "Sunrise: " + sunrisestring,
-            "                 " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date  if showdate else "",
+            r"                 " + "City: " + city,
+            r"       .--.      " + "Weather: " + weather,
+            r"    .-(    ).    " + "Temprature: " + temp,
+            r"   (___.__)__)   " + "Wind speed: " + wind_speed,
+            r"                 " + "Sunrise: " + sunrisestring,
+            r"                 " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date  if showdate else "",
         ]
         if showcityname
         else [
-            "                 " + "Weather: " + weather,
-            "       .--.      " + "Temprature: " + temp,
-            "    .-(    ).    " + "Wind speed: " + wind_speed,
-            "   (___.__)__)   " + "Sunrise: " + sunrisestring,
-            "                 " + "Sunset: " + sunsetstring,
-            "                 " + "Date: " + date if showdate else "",
+            r"                 " + "Weather: " + weather,
+            r"       .--.      " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Wind speed: " + wind_speed,
+            r"   (___.__)__)   " + "Sunrise: " + sunrisestring,
+            r"                 " + "Sunset: " + sunsetstring,
+            r"                 " + "Date: " + date if showdate else "",
         ]
     )
 
