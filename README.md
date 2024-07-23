@@ -9,14 +9,14 @@ Aesthetic and minimalistic weather fetching tool.
 * ```make```
 
 You can install all of them from your distros repositories (usually they're named ```python```, ```python-requests``` and ```make```)
-
+/usr/local/bin/rainy
 ## Installation & Configuration
 To install rainy, clone or download the repo, ```cd``` into it and just run ```make install``` (you can run ```make uninstall``` to uninstall it)
 
 **Before usage, you need to configure it**
 
 * First create an [OpenWeatherMap](https://home.openweathermap.org/users/sign_up) account, go to [API keys](https://home.openweathermap.org/api_keys) and get your key.
-* Then edit ```/usr/local/bin/rainy``` and set the API key, city and timezone in the config section.
+* Then edit ```/usr/local/bin/rainy``` and set the API key, city and time difference in the config section.
 * You can also set if you want to show city name or / and the current date if you want to.
 
 ## Usage
