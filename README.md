@@ -1,5 +1,11 @@
+# There's a newer version!
+
+This was a smaller project of mine, but it's no longer actively maintained.  
+However, loefey has rewritten and upgraded it in Rust, creating **Thundery**!
+
+👉 **[Check it out here](https://github.com/loefey/thundery)**
 # rainy
-Aesthetic and minimalistic weather fetching tool.
+Neofetch-like, minimalistic, and customizable weather-fetching tool.
 
 <img src="assets/preview.png">
 
