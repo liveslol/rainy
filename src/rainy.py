@@ -11,6 +11,7 @@ timeplus = 0  # Time zone used by default is UTC/GMT so you can define how many 
 timeminus = 0  # Time zone used by default is UTC/GMT so you can define how many hours should be subtracted from the time
 showcityname = False  # Show the city name in information, True or False
 showdate = False # Shows the date. Unfortunatly only in MM/DD/YY. True or False
+datetype = "%x" # Use strftime formats to switch how date is displayed, i.e. "%a, %Y-%d-%m"
 
 ###########################################################################################################################
 
@@ -18,7 +19,7 @@ import requests
 import datetime
 import sys
 
-date = datetime.datetime.now().strftime("%x")
+date = datetime.datetime.now().strftime(datetype)
 
 if units == "metric":
     windspeedunits = "m/s"
