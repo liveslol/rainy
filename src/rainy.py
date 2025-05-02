@@ -10,7 +10,7 @@ units = "metric"  # you can choose metric or imperial (anything else is kelvin)
 timeplus = 0  # Time zone used by default is UTC/GMT so you can define how many hours should be added to the time
 timeminus = 0  # Time zone used by default is UTC/GMT so you can define how many hours should be subtracted from the time
 showcityname = False  # Show the city name in information, True or False
-showdate = False # Shows the date. Unfortunatly only in MM/DD/YY. True or False
+showdate = False # Shows the date.
 datetype = "%x" # Use strftime formats to switch how date is displayed, i.e. "%a, %Y-%d-%m"
 
 ###########################################################################################################################
@@ -107,7 +107,7 @@ elif weather == "Clouds":
         [
             r"                 " + "City: " + city,
             r"       .--.      " + "Weather: cloudy",
-            r"    .-(    ).    " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Temperature: " + temp,
             r"   (___.__)__)   " + "Wind speed: " + wind_speed,
             r"                 " + "Sunrise: " + sunrisestring,
             r"                 " + "Sunset: " + sunsetstring,
@@ -116,7 +116,7 @@ elif weather == "Clouds":
         if showcityname
         else [
             r"                 " + "Weather: cloudy",
-            r"       .--.      " + "Temprature: " + temp,
+            r"       .--.      " + "Temperature: " + temp,
             r"    .-(    ).    " + "Wind speed: " + wind_speed,
             r"   (___.__)__)   " + "Sunrise: " + sunrisestring,
             r"                 " + "Sunset: " + sunsetstring,
@@ -128,7 +128,7 @@ elif weather == "Rain":
         [
             r"                 " + "City: " + city,
             r"       .--.      " + "Weather: rainy",
-            r"    .-(    ).    " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Temperature: " + temp,
             r"   (___.__)__)   " + "Wind speed: " + wind_speed,
             r"    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunrise: " + sunrisestring,
             r"                 " + "Sunset: " + sunsetstring,
@@ -137,7 +137,7 @@ elif weather == "Rain":
         if showcityname
         else [
             r"                 " + "Weather: rainy",
-            r"       .--.      " + "Temprature: " + temp,
+            r"       .--.      " + "Temperature: " + temp,
             r"    .-(    ).    " + "Wind speed: " + wind_speed,
             r"   (___.__)__)   " + "Sunrise: " + sunrisestring,
             r"    ʻ‚ʻ‚ʻ‚ʻ‚ʻ    " + "Sunset: " + sunsetstring,
@@ -149,7 +149,7 @@ elif weather == "Snow":
         [
             r"                 " + "City: " + city,
             r"       .--.      " + "Weather: snowy",
-            r"    .-(    ).    " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Temperature: " + temp,
             r"   (___.__)__)   " + "Wind speed: " + wind_speed,
             r"    * * * * *    " + "Sunrise: " + sunrisestring,
             r"                 " + "Sunset: " + sunsetstring,
@@ -158,7 +158,7 @@ elif weather == "Snow":
         if showcityname
         else [
             r"                 " + "Weather: snowy",
-            r"       .--.      " + "Temprature: " + temp,
+            r"       .--.      " + "Temperature: " + temp,
             r"    .-(    ).    " + "Wind speed: " + wind_speed,
             r"   (___.__)__)   " + "Sunrise: " + sunrisestring,
             r"    * * * * *    " + "Sunset: " + sunsetstring,
@@ -170,7 +170,7 @@ elif weather == "Thunderstorm":
         [
             r"                 " + "City: " + city,
             r"       .--.      " + "Weather: stormy",
-            r"    .-(    ).    " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Temperature: " + temp,
             r"   (___.__)__)   " + "Wind speed: " + wind_speed,
             r"        /_       " + "Sunrise: " + sunrisestring,
             r"         /       " + "Sunset: " + sunsetstring,
@@ -179,7 +179,7 @@ elif weather == "Thunderstorm":
         if showcityname
         else [
             r"       .--.      " + "Weather: stormy",
-            r"    .-(    ).    " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Temperature: " + temp,
             r"   (___.__)__)   " + "Wind speed: " + wind_speed,
             r"        /_       " + "Sunrise: " + sunrisestring,
             r"         /       " + "Sunset: " + sunsetstring,
@@ -191,7 +191,7 @@ else:
         [
             r"                 " + "City: " + city,
             r"       .--.      " + "Weather: " + weather,
-            r"    .-(    ).    " + "Temprature: " + temp,
+            r"    .-(    ).    " + "Temperature: " + temp,
             r"   (___.__)__)   " + "Wind speed: " + wind_speed,
             r"                 " + "Sunrise: " + sunrisestring,
             r"                 " + "Sunset: " + sunsetstring,
@@ -200,7 +200,7 @@ else:
         if showcityname
         else [
             r"                 " + "Weather: " + weather,
-            r"       .--.      " + "Temprature: " + temp,
+            r"       .--.      " + "Temperature: " + temp,
             r"    .-(    ).    " + "Wind speed: " + wind_speed,
             r"   (___.__)__)   " + "Sunrise: " + sunrisestring,
             r"                 " + "Sunset: " + sunsetstring,
